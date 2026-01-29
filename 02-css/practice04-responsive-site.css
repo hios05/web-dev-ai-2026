@@ -19,54 +19,6 @@
   margin: 10px;
 }
 
-@media (min-width: 600px) {
-  .header .item {
-    grid-template-columns: repeat(2, 250px);
-    justify-content: space-between;
-    display: flex;
-    flex-direction: row;
-    padding: 10px;
-  }
-  .tt .title {
-    margin-top: 45px;
-  }
-
-  .content {
-    flex-direction: row;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    grid-template-columns: repeat(4, 300px);
-  }
-}
-
-@media (min-width: 1000px) {
-  .header {
-    display: flex;
-    justify-content: flex-end;
-    position: absolute;
-    top: 0px;
-  }
-
-  .logo {
-    text-align: left;
-    justify-content: flex-start;
-    margin-left: 30px;
-  }
-  .header .item {
-    grid-template-columns: repeat(1fr);
-    display: flex;
-    gap: 20px;
-    top: 0px;
-    padding: 10px;
-  }
-
-  .content {
-    grid-template-rows: repeat(4, 50px);
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 .tt {
   display: grid;
   text-align: center;
@@ -91,8 +43,9 @@
   display: grid;
   grid-template-columns: repeat(2, 150px);
   justify-content: center;
+  justify-items: center;
+  margin: 30px;
   gap: 20px;
-  padding: 20px;
 }
 
 .content .mn {
@@ -139,4 +92,49 @@ section {
 
 .card img {
   width: 100%;
+}
+
+@media (min-width: 600px) {
+  .header .item {
+    grid-template-columns: repeat(2, 250px);
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+  }
+  .tt .title {
+    margin-top: 45px;
+  }
+
+  .content {
+    grid-template-columns: repeat(2, 200px);
+    gap: 50px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .header {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0px;
+  }
+
+  .logo {
+    text-align: left;
+    justify-content: flex-start;
+    margin-left: 30px;
+  }
+  .header .item {
+    grid-template-columns: repeat(1fr);
+    display: flex;
+    gap: 20px;
+    top: 0px;
+    padding: 10px;
+  }
+
+  .content {
+    grid-template-columns: repeat(4, 150px);
+    margin-bottom: 50px;
+  }
 }
