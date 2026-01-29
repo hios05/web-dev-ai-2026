@@ -1,0 +1,142 @@
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  text-align: center;
+  left: 10px;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.header .item {
+  display: flex;
+  text-align: center;
+  color: gray;
+  margin: 10px;
+}
+
+@media (min-width: 600px) {
+  .header .item {
+    grid-template-columns: repeat(2, 250px);
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+  }
+  .tt .title {
+    margin-top: 45px;
+  }
+
+  .content {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    grid-template-columns: repeat(4, 300px);
+  }
+}
+
+@media (min-width: 1000px) {
+  .header {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0px;
+  }
+
+  .logo {
+    text-align: left;
+    justify-content: flex-start;
+    margin-left: 30px;
+  }
+  .header .item {
+    grid-template-columns: repeat(1fr);
+    display: flex;
+    gap: 20px;
+    top: 0px;
+    padding: 10px;
+  }
+
+  .content {
+    grid-template-rows: repeat(4, 50px);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.tt {
+  display: grid;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  margin: 10px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.sub-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.content .mn {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+
+  font-weight: bold;
+}
+
+.menu1 {
+  background-color: coral;
+}
+.menu2 {
+  background-color: rgb(255, 186, 39);
+}
+.menu3 {
+  background-color: rgb(19, 158, 112);
+}
+.menu4 {
+  background-color: rgb(19, 68, 158);
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.card {
+  border: 1px solid #ddd;
+}
+
+.card p {
+  font-size: 0.8rem;
+}
+
+.card img {
+  width: 100%;
+}
