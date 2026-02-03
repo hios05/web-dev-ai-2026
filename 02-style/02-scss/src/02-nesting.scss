@@ -1,0 +1,38 @@
+/*코드 중첩 가능 - nav 변수를 반복해 쓰지 않고도 정상 작동*/
+
+nav {
+  background: black;
+  padding: 15px;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+
+    li {
+      background-color: white;
+      padding: 5px 10px;
+      color: black;
+
+      &.middle {
+        background-color: lightcoral;
+      }
+      &:hover {
+        background-color: cadetblue;
+        color: black;
+      }
+
+      &:hover a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+}

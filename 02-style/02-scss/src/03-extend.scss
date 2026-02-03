@@ -1,0 +1,28 @@
+// % : placeholder (공통된 속성을 여러 요소에 부여할 때 사용)
+//@extend %nn 형식으로 사용
+
+%btn {
+  border: 2px dashed black;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+.success {
+  @extend %btn;
+  background-color: green;
+  color: white;
+}
+
+.warning {
+  @extend %btn;
+  background-color: rgb(255, 238, 1);
+  color: black;
+}
+
+.error {
+  @extend %btn;
+  background-color: rgb(255, 0, 0);
+  color: white;
+}

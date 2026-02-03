@@ -1,0 +1,100 @@
+/* 1. 전체 선택자 */
+* {
+  color: blue;
+}
+/* 2. 태그 선택자 */
+p {
+  color: red;
+}
+
+/* 3. 클래스 선택자 */
+.notice {
+  background: yellow;
+}
+/* 4. 아이디 선택자 : #*/
+#only-one {
+  background: lime;
+}
+/* 5. 그룹 선택자 : 쉼표 */
+.group-a,
+.group-b {
+  background: cyan;
+}
+/* 6. 조합 선택자 */
+/* 자손 선택자 : .A p*/
+.combo p {
+  color: green;
+}
+/* 자식 선택자 : .A>p */
+.combo > p {
+  background: yellow;
+}
+/* 형제 선택자
+    + : 바로 다음, ~ : 뒤에 있는 모든 형제
+*/
+#sib + .sib {
+  background: orange;
+}
+#sib ~ .sib {
+  color: brown;
+}
+/* 7. 속성 선택자 */
+[type="text"] {
+  background: pink;
+}
+[placeholder] {
+  background: lightgreen;
+}
+/* 8. 선택/반응 선택자 */
+
+/* 클래스 요소 위에 마우스를 올렸을 때 */
+.btn:hover {
+  background: gold;
+}
+
+/* 체크박스를 체크했을 때 */
+input:checked + label {
+  color: purple;
+}
+
+/* 입력창 위에서 커서가 깜빡일 때 */
+input:focus {
+  background: lightblue;
+}
+
+/* 버튼이 비활성화 되었을 때 */
+.btn:disabled {
+  background: silver;
+}
+/* 9. 구조 선택자 */
+.list li:first-child {
+  background: yellow;
+}
+.list li:last-child {
+  background: orange;
+}
+.list li:nth-child(2) {
+  background: lightblue;
+}
+.list li:nth-child(odd) {
+  color: navy;
+}
+/* 10. 가상 요소 선택자 */
+.badge::before {
+  content: "NEW";
+  background: black;
+  color: white;
+}
+.badge::after {
+  content: "HOT";
+  background: red;
+  color: white;
+}
+/* 11. :is, :where - 묶는 선택자 */
+:is(header, footer) a {
+  color: green;
+}
+
+:where(header, footer) a {
+  color: lightcoral;
+}

@@ -1,0 +1,7 @@
+//practice04-responsive-site.css
+//3개의 파일에 각각 코드 scss 문법을 사용해 분리
+
+@use "components/reset.scss"; //_reset,scss
+@use "components/header"; //_header.scss
+@use "components/main"; //_main.scss
+@use "components/section"; //_section.scss

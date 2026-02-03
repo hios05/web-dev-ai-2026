@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="06-layout.css" />
+  </head>
+  <body>
+    <h2>박스모델</h2>
+    <h3>width, height</h3>
+
+    <div class="box fixed">고정 크기</div>
+    <div class="parent">
+    <div class="box percent">% 크기</div>
+
+
+
+    <h3>padding, margin</h3>
+<p>- padding : 테두리와 콘텐츠 사이의 여백 </p>
+<p>margin : 요소와 요소 사이 여백</p>
+    <div class="space" id="padding1">전체 padding</div>
+    <div class="space" id="padding2">부분 padding</div>
+
+    <div class="space" id="margin1">전체 margin</div>
+    <div class="space" id="margin2">부분 margin</div>
+    <div class="space" id="margin3">margin으로 가운데 정렬</div>
+
+
+    <h3>Border</h3>
+
+<div class="border" id="border1"></div>
+<div class="border" id="border2"></div>
+<div class="border" id="border3"></div>
+
+<h3>box-sizing</h3>
+<div class="box-sizing box-content">300px + padding + border</div>
+<div class="box-sizing box-border">300px 안에 padding과 border가 들어감</div>
+
+<h2>display</h2>
+<h3>블록요소를 인라인요소로 변경</h3>
+
+<div class="display display-inline">1번째 영역</div>
+<div class="display display-inline">2번째 영역</div>
+<div class="display display-inline">3번째 영역</div>
+
+
+<h3>인라인요소를 블럭요소로 변경</h3>
+<div class="display display-block">1번째 영역</div>
+<div class="display display-block">2번째 영역</div>
+<div class="display display-block">3번째 영역</div>
+
+<h2>float, clear</h2>
+
+<div class="float">001</div>
+<div class="float">002</div>
+<div class="float">003</div>
+
+<!--float를 사용한 이후에는 반드시 clear를 해주어야 한다.-->
+<h2 style="clear:right">position</h2>
+
+<div class="outer">
+
+<div class="position-box relative"></div>
+<div class="position-box absolute"></div>
+<div class="position-box fixed"></div>
+<div class="position-box sticky"></div> 
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</div>
+
+
+<h2>visibility vs display:none</h2>
+
+<div class="vd hidden"></div>
+<div class="vd visible"></div>
+<div class="vd none"></div>
+
+  </body>
+</html>

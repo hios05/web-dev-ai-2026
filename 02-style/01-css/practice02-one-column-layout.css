@@ -1,0 +1,80 @@
+.pg {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background: white;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+.logo {
+  flex: content;
+  align-items: center;
+  display: flex;
+  position: relative;
+  left: 50px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.hd {
+  flex-wrap: nowrap;
+  position: fixed;
+  right: 50px;
+  display: flex;
+  flex: 0.1;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+}
+
+.bd {
+  height: 100vh;
+  display: flex;
+  margin: auto;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#part1 {
+  background: royalblue;
+}
+
+.txt1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.txt2 {
+  font-size: 18px;
+  flex-wrap: wrap;
+  column-gap: 20px;
+}
+
+#part2 {
+  background: rgba(255, 117, 4, 0.774);
+}
+
+#part3 {
+  background: rgb(225, 65, 65);
+}
+
+#top {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  background: black;
+  color: white;
+}

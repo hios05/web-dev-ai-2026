@@ -1,0 +1,53 @@
+@mixin main($f-size, $f-weight, $ta) {
+  font-size: $f-size;
+  font-weight: $f-weight;
+  text-align: $ta;
+}
+main {
+  padding-top: 120px;
+
+  h2 {
+    @include main(3rem, bold, center);
+    margin-top: 20px;
+    line-height: 1.2;
+  }
+
+  h3 {
+    @include main(2.2rem, bold, center);
+    margin-top: 15px;
+  }
+  .main-item {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  .circle {
+    @include main(1.5rem, bold, center);
+    aspect-ratio: 1/1;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@mixin c-color($ccr) {
+  background-color: $ccr;
+}
+.circle {
+  &:nth-child(1) {
+    @include c-color(lightpink);
+  }
+  &:nth-child(2) {
+    @include c-color(cadetblue);
+  }
+  &:nth-child(3) {
+    @include c-color(lightgreen);
+  }
+  &:nth-child(4) {
+    @include c-color(lightcoral);
+  }
+}

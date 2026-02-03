@@ -1,0 +1,118 @@
+/*font-family*/
+.ff1 {
+  font-family: "돋움", "Noto sans kr", sans-serif;
+  font-family: "Noto sans kr", "돋움", sans-serif;
+}
+
+.ff2 {
+  font-family: serif;
+}
+
+.ff3 {
+  font-family: "Playwrite GB J Guides", cursive;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/*font size*/
+
+.fs1 {
+  font-size: 20px;
+}
+
+.fs2 {
+  font-size: 2em;
+}
+
+/*보통 상대 크기로 rem을 쓴다. 기존 폰트 사이즈 A*4 */
+.fs3 {
+  font-size: 4rem;
+}
+
+/*웹사이트 창 크기에 맞춰 변화*/
+.fs4 {
+  font-size: 2vw;
+}
+
+/*clamp(최소값, 기준값, 최대값)*/
+.fs5 {
+  font-size: clamp(1rem, 2vw, 2rem);
+}
+
+/*font weight*/
+.fw1 {
+  font-weight: 500;
+}
+
+.fw2 {
+  font-weight: bold;
+}
+
+.fw3 {
+  font-style: 100;
+}
+
+/*line height : 줄간격*/
+.lh {
+  line-height: 1;
+}
+
+/*letter spacing : 글자 간격*/
+.ls {
+  letter-spacing: 2px;
+}
+
+/*text align : 정렬*/
+.ta {
+  text-align: left;
+}
+
+.ta2 {
+  text-align: center;
+}
+
+.ta3 {
+  text-align: right;
+}
+
+/*color*/
+
+/*브라우저가 인식하는 기본 색상명으로 총 216가지가 있다*/
+.c-name {
+  color: purple;
+}
+
+/*RRGGBB - 코드 앞 컬러칩을 클릭하면 팔레트로 뽑을 수 있다.*/
+.c-16 {
+  color: #278f86;
+}
+
+/*Red, Green, Blue, Alpha(불투명도)*/
+.c-rgb {
+  color: rgb(55, 30, 100);
+  background: rgba(200, 250, 20, 0.5);
+}
+
+/*색상환(0~360), 채도(0~100%), 밝기(0~100%)*/
+.c-hsl {
+  color: hsl(20, 30%, 50%);
+}
+
+/*text-decoration*/
+.td1 {
+  text-decoration: underline;
+}
+
+.td2 {
+  text-decoration: none;
+}
+
+/*text overflow*/
+
+.to {
+  width: 140px;
+  background: pink;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

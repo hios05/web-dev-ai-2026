@@ -1,0 +1,197 @@
+.box {
+  background: lightblue;
+  border: 2px solid;
+  margin: 10px;
+}
+
+.fixed {
+  width: 200px;
+  height: 100px;
+}
+
+.parent {
+  background: pink;
+  height: 200px;
+}
+
+/*부모 높이가 정해져 있지 않으면 %height는 계산할 기준이 없다*/
+
+.percent {
+  width: 50%;
+  height: 50%;
+}
+
+/*padding, margin*/
+.space {
+  background: lightyellow;
+  border: 1px solid;
+  margin-bottom: 10px;
+}
+
+#padding1 {
+  padding: 20px;
+}
+
+#padding2 {
+  padding-top: 30px;
+  padding-right: 40px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  /*top right bottom left - 시계방향*/
+  padding: 30px 10px 20px 40px;
+  /*top right / left bottom*/
+  padding: 10px, 20px, 30px;
+  /*top/right  left/bottom*/
+  padding: 30px, 20px;
+}
+
+#margin1 {
+  margin: 20px;
+}
+
+/*margin collapse(상쇄) 현상*/
+#margin2 {
+  margin: 30px 10px 20px 40px;
+}
+
+/*margin을 오토로 주면 창 크기에 상관 없이 가운데정렬이 들어감*/
+#margin3 {
+  width: 200px;
+  margin: auto;
+}
+
+/*border*/
+.border {
+  width: 100px;
+  height: 100px;
+  background: #eeeeee;
+}
+
+/*border : 테두리굵기 유형 색상
+sold : 실선 / Dashed : 점선 / dotted : 점선*/
+#border1 {
+  border: 3px dashed magenta;
+}
+
+#border2 {
+  border: 5px solid;
+  border-radius: 10px;
+}
+
+#border3 {
+  border: 4px solid;
+  border-radius: 50%;
+}
+
+/*box-sizing*/
+.box-sizing {
+  width: 300px;
+  height: 200px;
+  background-color: lightcoral;
+  margin: 10px;
+  border: 10px solid;
+  padding: 20px;
+}
+
+/*border와 padding을 별개로 범위를 계산해준다. 360x260*/
+.box-content {
+  box-sizing: content-box;
+}
+
+.box-border {
+  box-sizing: border-box;
+}
+
+/*display*/
+.display {
+  background-color: pink;
+  width: 150px;
+  height: 80px;
+  margin: 5px;
+}
+
+/*inline : width, height값 X*/
+.display-inline {
+  display: inline;
+}
+
+/*inline-block : width, height값 O*/
+.display-inline {
+  display: inline-block;
+}
+
+.display-block {
+  display: block;
+}
+
+/*float : 단체 정렬 방향*/
+.float {
+  float: right;
+  width: 80px;
+  height: 80px;
+  background: skyblue;
+  margin: 5px;
+  text-align: center;
+  line-height: 80px;
+}
+
+.position-box {
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+}
+
+.outer {
+  position: relative;
+  overflow: auto;
+}
+
+/*position relative가 걸려 있어야만 top/bottom 등 위치이동 명령을 쓸 수 있다*/
+.relative {
+  background: orange;
+  position: relative;
+  top: 10px;
+  left: 40px;
+}
+
+/*relative는 상대적이기 때문에 본인 위치에서부터 시작
+absolute는 절대적이기 때문에 가장 위에서부터 시작
+
+부모 명령어에 넣으면 속성이 해제되기 때문에 넣어서 쓴다.*/
+.absolute {
+  background: green;
+  position: absolute;
+  bottom: 50px;
+  right: 100px;
+}
+
+.fixed {
+  background: magenta;
+  position: fixed;
+  bottom: 20px;
+  right: 100px;
+}
+
+.sticky {
+  background: blueviolet;
+  position: sticky;
+  top: 0px;
+}
+
+.vd {
+  width: 100px;
+  height: 100px;
+  background: lightblue;
+  margin: 10px;
+  display: inline-block;
+}
+
+/*보이지는 않지만 있었던 자리 그대로*/
+.hidden {
+  visibility: hidden;
+}
+
+/*존재 자체를 화면에서 없애다*/
+.none {
+  display: none;
+}

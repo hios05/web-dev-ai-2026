@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  
+  </head>
+  <body>
+    <h2>버튼 컴포넌트</h2>
+    <button class="btn">Button</button>
+    <a class="btn btn--red" a href="">Warning</a>
+    <div class="btn btn--blue">결제하기</div>
+    <button class="btn">취소</button>
+
+    <h2>카드 컴포넌트</h2>
+    <div class="card card--bold">
+
+<div class="card__media"></div>
+<div class="card__body">
+    <div class="card__title">Lorem Ipsum</div>
+    <div class="card__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus, natus eaque? Porro fuga aliquam, debitis, dicta neque inventore quasi, asperiores sint quam deleniti rem! Veritatis nihil ducimus quo! Sunt, aliquid!</div>
+    </div>
+    
+<br>
+
+<div class="card__media"></div>
+<div class="card__body">
+    <!--BEM(Block__Element--Modifier)
+    - Block : 재사용 가능한 블록 (상위 태그)
+    - Element : 블록에 종속하는 하위요소 (하위 태그들)
+    - Mudifier : 블록이나 엘리먼트의 변형 또는 속성 (모양, 상태 등)-->
+    
+    <div class="card__title  card__title--thin">Lorem Ipsum</div>
+    <div class="card__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus, natus eaque? Porro fuga aliquam, debitis, dicta neque inventore quasi, asperiores sint quam deleniti rem! Veritatis nihil ducimus quo! Sunt, aliquid!</div>
+    </div>
+
+  </body>
+</html>

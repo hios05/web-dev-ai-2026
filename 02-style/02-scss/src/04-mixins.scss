@@ -1,0 +1,56 @@
+//mixin에 값을 여러개 담을 때는 N($AA, $BB, $CC) 형식으로 사용
+//값을 받을 때도 n(aa, bb, cc) 로 받는다.
+
+@mixin btn($bg, $cr) {
+  border: 2px dashed black;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  background-color: $bg;
+  color: $cr;
+}
+
+.success {
+  @include btn(green, white);
+}
+
+.warning {
+  @include btn(yellow, black);
+}
+
+.error {
+  @include btn(red, white);
+}
+
+//
+
+@mixin smDevice {
+  @media (min-width: 480px) {
+    @content;
+  }
+}
+
+@mixin lgDevice {
+  @media (min-width: 760px) {
+    @content;
+  }
+}
+
+@mixin MaxDevice {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+body {
+  @include smDevice {
+    background-color: lightblue;
+  }
+  @include lgDevice {
+    background-color: pink;
+  }
+
+  @include MaxDevice {
+    background-color: lightgreen;
+  }
+}

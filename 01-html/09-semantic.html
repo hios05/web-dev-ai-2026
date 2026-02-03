@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>레이아웃 1 : div로만 구성</h2>
+    <div id="header">
+      <h1>LOGO</h1>
+      <div id="nav">GNB</div>
+      <!-- Global Navigation Bar -->
+    </div>
+    <div id="main">
+      <!--class : 텍스트에 별명을 지정해주는 것으로, css에서 .별명으로 연계 가능-->
+      <div class="main-image">Main Image 1</div>
+      <div class="main-image">Main Image 2</div>
+      <div class="main-content">
+        <h2>Content</h2>
+        <p>Content Text</p>
+      </div>
+
+      <!--Id : 페이지에서 딱 한 번 쓸 수 있으며, 큰 틀이나 특정 기능을 하는 걸 지정해줄 때 씀-->
+    </div>
+    <div id="section">
+      <div id="article">Article</div>
+      <div id="aside">Aside</div>
+    </div>
+    <div id="footer">Footer</div>
+
+    <h2>레이아웃 2 : 시맨틱 태그 사용</h2>
+    <!-- 레이아웃도 의미있는 태그를 사용하자 -->
+    <header>
+      <h1>LOGO</h1>
+      <nav>GNB</nav>
+      <!-- Global Navigation Bar
+       nac : navigation의 약자로, 검색 엔진에게 구역 메뉴를 보내는 역할-->
+    </header>
+    <main>
+      <div class="main-image">Main Image 1</div>
+      <div class="main-image">Main Image 2</div>
+      <div class="main-content">
+        <h2>Content</h2>
+        <p>Content Text</p>
+      </div>
+    </main>
+    <section>
+      <article>Article</article>
+      <aside>Aside</aside>
+    </section>
+    <footer>Footer</footer>
+  </body>
+</html>

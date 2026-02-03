@@ -1,0 +1,125 @@
+header {
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  background-color: white;
+}
+header h1 {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+header nav {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+main {
+  padding-top: 120px;
+}
+main h2 {
+  margin-top: 20px;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.2;
+}
+main h3 {
+  margin-top: 15px;
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+main .main-item {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+main .circle {
+  aspect-ratio: 1/1;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.circle:nth-child(1) {
+  background-color: indianred;
+}
+.circle:nth-child(2) {
+  background-color: navy;
+}
+.circle:nth-child(3) {
+  background-color: cadetblue;
+}
+.circle:nth-child(4) {
+  background-color: coral;
+}
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+  padding: 10px;
+}
+.card {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+.card img {
+  width: 100%;
+}
+.card h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.card p {
+  margin-top: 5px;
+}
+@media (min-width: 600px) {
+  header h1 {
+    font-size: 2.4rem;
+  }
+  header nav {
+    justify-content: space-between;
+    padding: 10px;
+  }
+  main h2 {
+    margin-top: 45px;
+  }
+  main .main-item {
+    grid-template-columns: repeat(2, 250px);
+    padding: 30px;
+    column-gap: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0;
+  }
+  header h1 {
+    padding-left: 20px;
+    height: 100%;
+    margin: 0;
+    line-height: 80px;
+  }
+  header nav {
+    gap: 20px;
+  }
+  main .main-item {
+    margin-top: 40px;
+    grid-template-columns: repeat(4, 250px);
+  }
+}

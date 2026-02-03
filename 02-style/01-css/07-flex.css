@@ -1,0 +1,111 @@
+.container {
+  display: flex;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 1rem;
+}
+
+.item {
+  background: #fff;
+  border: 2px solid #333;
+  padding: 1rem;
+  text-align: center;
+}
+
+/*flex-direction
+column : 세로 방향, row : 가로 방향
+colimn-reverse : 세로 반대 방향
+row-reverse : 가로 반대 방향*/
+
+.fd {
+  flex-direction: row-reverse;
+}
+
+/*justify-content : 주축 정렬 / align-items : 교차축 정렬
+(flex-)start : 왼쪽,상단 정렬 / (flex-)end : 오른쪽,하단 정렬 / center : 가운데 정렬
+space-between : 양 끝 정렬 / space-around : 균일 간격 정렬 / space-evenly : 동일 간격 정렬*/
+
+.ja {
+  flex-direction: column;
+  height: 200px;
+  justify-content: start;
+  align-items: end;
+}
+
+/*flex-warp
+nowarp : 줄바꿈 X / warp : 줄바꿈 O */
+
+.fw {
+  flex-wrap: wrap;
+}
+.fw .item {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+
+/*align self 
+지정된 상하 값을 따라 스스로 위치 정렬 (기본값 0)*/
+
+.as {
+  height: 300px;
+}
+.self-start {
+  align-self: flex-start;
+}
+.self-center {
+  align-self: center;
+}
+.self-end {
+  align-self: flex-end;
+}
+
+/*order
+안에서 지정값이 적은 순서대로 정리*/
+.order1 {
+  order: 1;
+}
+.order3 {
+  order: -3;
+}
+
+/*gap : 아이템 사이 간격*/
+.gap {
+  gap: 30px;
+}
+
+/*flex-grow : 남는 공간 분배
+큰 숫자일수록 차지 공간이  많다*/
+.grow1 {
+  flex-grow: 1;
+}
+.grow2 {
+  flex-grow: 2;
+}
+.grow3 {
+  flex-grow: 3;
+}
+
+/*flex-shrink : 부족한 공간 압축
+0= 아예 줄어즐지 않음*/
+
+.sh {
+  width: 200px;
+}
+.shrink-1 {
+  flex-shrink: 0;
+}
+.shrink-2 {
+  flex-shrink: 2;
+}
+
+/*flex-basis*/
+/*flex > flex-grow flex-shirink flex-basis를 한번에 사용
+flex : 1 1 0*/
+.basis-1 {
+  flex-basis: 200px;
+  flex-shrink: 0 1 auto;
+}
+.basis-3 {
+  flex: 1;
+}

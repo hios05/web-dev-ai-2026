@@ -1,0 +1,27 @@
+.card {
+  border: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+.card__media {
+  aspect-ratio: 16 / 9;
+  background-color: black;
+  object-fit: cover;
+}
+
+.card__title {
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.card__title--thin {
+  font-weight: 100;
+}
+
+.card--bold {
+  border: 1px solid black;
+}

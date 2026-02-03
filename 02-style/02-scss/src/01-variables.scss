@@ -1,0 +1,30 @@
+body {
+  background-color: lightcoral;
+}
+
+/*SCSS 변수*/
+$main-color: purple;
+$text-color: white;
+$border-size: 5px;
+
+button {
+  background-color: $main-color;
+  color: $text-color;
+  border-radius: $border-size;
+  border: none;
+}
+
+/*css 변수*/
+
+/*
+:root {
+  --main-color: purple;
+  --text-color: white;
+  --border-size: 5px;
+}
+button {
+  background-color: var(--main-color);
+  color: var(--text-color);
+  border-radius: var(--border-size);
+  border: none;
+}*/
