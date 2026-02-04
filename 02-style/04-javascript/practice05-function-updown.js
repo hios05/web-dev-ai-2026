@@ -1,4 +1,4 @@
-const getTarget = Math.floor(Math.random() * 10) + 1;
+const getTarget = Math.floor(Math.random() * 100) + 1;
 console.log(getTarget);
 
 let count = 0;
