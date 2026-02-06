@@ -31,14 +31,10 @@ function Game() {
         continue;
       }
 
-      // 컴퓨터 설정
-
       const random = getRandom();
       console.log(random);
 
       const computer = rps[random];
-
-      // 게임 설정
 
       if (playerIndex - random === 0) {
         alert(`${input} vs ${computer} 비겼습니다.`);
