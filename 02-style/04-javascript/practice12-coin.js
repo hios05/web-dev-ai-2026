@@ -34,7 +34,7 @@ const fetchapi = async () => {
     // console.log(value.market);
     // console.log(value.korean_name);
 
-    const className = value.change.toLowerCase();
+    const className = value.change.toLowerCase(); // CSS에서 컬러 변화를 주기 위해 AI에게 도움
 
     coin.innerHTML += `
     <div class="card ${className}">
