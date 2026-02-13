@@ -20,7 +20,7 @@ const fetchapi = async () => {
 
   const data2 = await response2.json();
 
-  // find 함수>
+  // find 함수
 
   const mapdata = data.map((value) => {
     const result = data2.find((item) => item.market === value.market);
