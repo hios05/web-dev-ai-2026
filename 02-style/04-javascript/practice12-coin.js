@@ -9,9 +9,7 @@ const fetchapi = async () => {
   const data = await response.json();
 
   // map함수 = return 값으로 배열을 만들어줌
-  // 데이터가 너무 많으면 URL 길이 제한에 걸리므로 10개만 자릅니다.
-  const slicedData = data.slice(0, 10);
-  const markets = slicedData.map((value) => {
+  const markets = data.map((value) => {
     return value.market;
   });
   console.log(markets);
@@ -23,16 +21,16 @@ const fetchapi = async () => {
   const data2 = await response2.json();
 
   // find 함수>
-  // map의 결과를 변수에 저장해야 합니다.
-  const finalData = slicedData.map((value) => {
+
+  const mapdata = data.map((value) => {
     const result = data2.find((item) => item.market === value.market);
     return { ...value, ...result };
   });
 
-  console.log(finalData);
+  console.log(mapdata);
 
   // 화면에 드러나는 코드
-  finalData.forEach((value) => {
+  mapdata.forEach((value) => {
     // console.log(value.market);
     // console.log(value.korean_name);
 
