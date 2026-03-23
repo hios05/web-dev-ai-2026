@@ -90,6 +90,91 @@ CREATE TABLE users(
     birth DATE
 );
 
+DROP TABLE users; -- 데이터 삭제
+
+SELECT * FROM users; -- 데이터 조회
+
+INSERT INTO users VALUES('users', 'users01@gmail.com', 'pass01'); -- 데이터 추가 
+INSERT INTO users VALUES(NULL, NULL, NULL);
+
+-- 제약조건(CONSTRAINT) : 데이터 무결성을 지키기 위한 규칙
+-- NOT NULL : NULL 값은 실행되지 않는다
+
+CREATE TABLE users(
+id VARCHAR(50) NOT NULL,
+email VARCHAR(200) NOT NULL,
+password VARCHAR(200) NOT NULL
+);
+
+SELECT * FROM users;
+
+-- UNIQUE : 중복된 값은 허용하지 않음, NOT NULL을 무조건 붙여야 함
+
+CREATE TABLE users(
+id VARCHAR(50) UNIQUE,
+email VARCHAR(200) NOT NULL UNIQUE,
+password VARCHAR(200) NOT NULL
+);
+
+INSERT INTO users VALUES('users', 'users01@gmail.com', 'pass01'); -- 데이터 추가 
+INSERT INTO users VALUES('users01', 'users02@gmail.com', 'pass01'); 
+INSERT INTO users VALUES(NULL, 'users03@gmail.com', 'pass01'); 
+
+-- PRIMARY KEY : 각 레코드를 구분하는 대푯값, 중복 + NULL X / 무조건 테이블당 하나
+
+CREATE TABLE users(
+id VARCHAR(50) PRIMARY KEY,
+email VARCHAR(200) NOT NULL UNIQUE,
+password VARCHAR(200) NOT NULL
+);
 
 
+DROP TABLE recipes; 
 
+--  FOREIGN KEY : 다른 테이블들과 연결할 때 사용
+-- user_id를 user와 연결하므로, 이는 동일한 값이여야만 연결이 가능하다
+CREATE TABLE recipes(
+id INT auto_increment PRIMARY KEY, -- id에 붇는 순번 
+user_id VARCHAR(50) NOT NULL,
+	name VARCHAR(50) NOT NULL UNIQUE,
+    image VARCHAR(200) NOT NULL ,
+    description TEXT NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL
+);
+
+INSERT INTO users (id, email, password)
+VALUES('3','yunibus02@gamil.com', 'jsjs9293');
+
+INSERT INTO recipes (user_id, name, image, description)
+VALUES('3', '미나리 소주', 'localhost:3000/soju.jpg', '요리하는 돌아이');
+SELECT * FROM users;
+
+/*
+부모 테이블의 데이터를 삭제할 시 그 값을 창조하는 자식 테이블 데이터를 어떻게 할지
+
+- ON DELETE RESTRICT (기본값) : 자식 테이블에서 사용중인 부모 데이터는 삭제 X
+- ON DELETE SET NULL : 부모 데이터를 삭제하면 자식 테이블의 FN 값을 NULL로 변경
+- ON DELETE CASCADE : 부모 데이터를 삭제하면 자식 데이터도 삭제
+*/
+
+DROP TABLE recipes;
+
+
+/*
+CREATE TABLE recipes(
+id INT auto_increment PRIMARY KEY, -- id에 붇는 순번 
+user_id VARCHAR(50) NOT NULL,
+	name VARCHAR(50) NOT NULL UNIQUE,
+    image VARCHAR(200) NOT NULL ,
+    description TEXT NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+*/
+
+INSERT INTO recipes (user_id, name, image, description)
+VALUES('3', '미나리 소주', 'localhost:3000/soju.jpg', '요리하는 돌아이');
+SELECT * FROM users;
+
+DELETE FROM users WHERE id = '3';
