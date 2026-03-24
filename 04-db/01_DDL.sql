@@ -133,15 +133,7 @@ DROP TABLE recipes;
 
 --  FOREIGN KEY : 다른 테이블들과 연결할 때 사용
 -- user_id를 user와 연결하므로, 이는 동일한 값이여야만 연결이 가능하다
-CREATE TABLE recipes(
-id INT auto_increment PRIMARY KEY, -- id에 붇는 순번 
-user_id VARCHAR(50) NOT NULL,
-	name VARCHAR(50) NOT NULL UNIQUE,
-    image VARCHAR(200) NOT NULL ,
-    description TEXT NOT NULL,
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL
-);
+
 
 INSERT INTO users (id, email, password)
 VALUES('3','yunibus02@gamil.com', 'jsjs9293');
@@ -158,22 +150,20 @@ SELECT * FROM users;
 - ON DELETE CASCADE : 부모 데이터를 삭제하면 자식 데이터도 삭제
 */
 
-DROP TABLE recipes;
-
-
-/*
+    
 CREATE TABLE recipes(
-id INT auto_increment PRIMARY KEY, -- id에 붇는 순번 
-user_id VARCHAR(50) NOT NULL,
-	name VARCHAR(50) NOT NULL UNIQUE,
-    image VARCHAR(200) NOT NULL ,
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	user_id INT,
+	name VARCHAR(50) NOT NULL,
+    image VARCHAR(200) NOT NULL,
     description TEXT NOT NULL,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL
 );
-*/
 
-INSERT INTO recipes (user_id, name, image, description)
+DROP TABLE recipes;
+
+INSERT INTO recipes (user_id, name, image, description)                                                                                                                                                                                                                          
 VALUES('3', '미나리 소주', 'localhost:3000/soju.jpg', '요리하는 돌아이');
 SELECT * FROM users;
 
