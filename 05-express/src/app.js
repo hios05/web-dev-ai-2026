@@ -2,6 +2,7 @@ import express from "express";
 import recipesRouter from "./routes/recipes.js";
 import usersRouter from "./routes/users.js";
 import barsRouter from "./routes/bars.js";
+import chatRouter from "./routes/chat.js";
 import errorHandler from "./middleware/error.js";
 
 const app = express();
@@ -19,6 +20,7 @@ app.use(express.json());
 app.use("/recipes", recipesRouter);
 app.use("/users", usersRouter);
 app.use("/bars", barsRouter);
+app.use("/chat", chatRouter);
 
 app.use(errorHandler);
 

@@ -12,6 +12,9 @@ const Header = () => {
         </Link>
       </div>
       <nav className="flex items-center gap-5 text-base">
+        <Link className="text-[#7b2d43]" to="/chat">
+          AI 상담
+        </Link>
         <Link className="text-[#7b2d43]" to="/bars">
           칵테일바 찾기
         </Link>
