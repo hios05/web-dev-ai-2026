@@ -9,9 +9,13 @@ import {
   editRecipe,
 } from "../controllers/recipesController.js";
 
+// URL, 메서드를 컨트롤러로 연결 
 const router = express.Router();
 
+// POST https://localhost:4000/recipes
 router.post("/", auth, upload.single("image"), uploadToCloudinary, addRecipe);
+
+// GET https://localhost:4000/recipes
 router.get("/", getRecipes);
 router.get("/:id", getRecipe);
 router.delete("/:id", auth, deleteRecipe);

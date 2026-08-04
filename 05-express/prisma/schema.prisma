@@ -1,3 +1,9 @@
+// prisma : CREATE TABLE, SELECT, * FROM .. 같은 SQL을 대신 짜주는 ORM 도구
+// ORM (Object Relational Mapping) : 객체와 데이터베이스 테이블을 연결해주는 기술
+// schema.prisma는 설계도라고 보면 됨 
+// npx prisma db push 
+// npx prisma migrate dev --name init : 푸시와 기능은 동일하게 db 테이블 생성이지만, 기록이 남는다.
+
 generator client {
   provider = "prisma-client-js"
 }

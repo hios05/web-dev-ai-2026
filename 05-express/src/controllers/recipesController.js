@@ -1,5 +1,6 @@
 import * as recipeService from "../services/recipeService.js";
 
+// 요청(request)에서 값 꺼내기 -> service 호출 -> 응답(response) 형태로 반환
 export const getRecipes = async (req, res) => {
   const keyword = req.query.keyword;
   const page = parseInt(req.query.page) || 1;
@@ -7,12 +8,14 @@ export const getRecipes = async (req, res) => {
   res.status(200).json(result);
 };
 
+// GET https://localhost:4000/recipes
 export const getRecipe = async (req, res) => {
   const { id } = req.params;
   const result = await recipeService.getRecipeDetail(id);
   res.status(200).json(result);
 };
 
+// GET https://localhost:4000/recipes/1 (:id)
 export const addRecipe = async (req, res) => {
   const { name, description } = req.body;
   const name_eng = req.body.name_eng ?? null;

@@ -141,3 +141,9 @@ def delete_member(member_id:int):
     conn.close()
     return {"message": "삭제 완료"}
 
+"""
+ 과제 
+- 기간 : 7월 29일(금)
+- 09에서 진행한 코드를 FastAPI or express로 API 만들기 
+- 주제_이름.ipynb <- 앞에서 진행했던 파일에 그대로 붙여 해도 상관없음 
+"""
